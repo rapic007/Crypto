@@ -3,7 +3,7 @@ import UIKit
 struct CoinArray: Decodable {
     let data: [Coin]
 }
-struct Coin: Decodable {
+struct Coin: Codable {
     
     let id: Int
     let name: String
@@ -23,16 +23,16 @@ struct Coin: Decodable {
     }
 }
 
-struct PricingData: Decodable {
-    let Dollar: Dollar
+struct PricingData: Codable {
+    let USD: USD
 }
 
-struct Dollar: Decodable {
+struct USD: Codable {
     let price: Double
     let marketCap: Double
     
     enum CodingKeys: String, CodingKey {
         case price = "price"
-        case marketCap = "marlet_cap"
+        case marketCap = "market_cap"
     }
 }

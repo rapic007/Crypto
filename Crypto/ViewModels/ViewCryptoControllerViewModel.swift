@@ -31,17 +31,17 @@ class ViewCryptoControllerViewModel {
     }
         
     var priceLabel: String {
-        return "Цена $: \(self.coin.pricingData.Dollar.price) $"
+        return "Цена: \(self.coin.pricingData.USD.price) $"
     }
     
     var marketCapLabel: String {
-        return "Рыночная капитализация: \(self.coin.pricingData.Dollar.marketCap) $"
+        return "Капитализация: \(self.coin.pricingData.USD.marketCap) $"
     }
     
     var maxSupplyLabel : String {
         
         if let maxSupply = self.coin.maxSupply {
-            return "Макисмальное количество: \(self.coin.maxSupply)"
+            return "Макисмальное кол-во: \(maxSupply)"
         } else {
             return "SSDDDDSD"
         }
