@@ -15,11 +15,11 @@
 		CB2BF6582ACB2152003A99E9 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2BF6572ACB2152003A99E9 /* EndPoint.swift */; };
 		CB2BF65A2ACC70BB003A99E9 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2BF6592ACC70BB003A99E9 /* CoinService.swift */; };
 		CB2BF65C2ACC7932003A99E9 /* HomeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2BF65B2ACC7932003A99E9 /* HomeControllerViewModel.swift */; };
+		CB2BF65F2ACDE095003A99E9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB2BF65E2ACDE095003A99E9 /* SDWebImage */; };
 		CB5D4CA72AC342D4007CA851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CA62AC342D4007CA851 /* AppDelegate.swift */; };
 		CB5D4CA92AC342D4007CA851 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CA82AC342D4007CA851 /* SceneDelegate.swift */; };
 		CB5D4CAB2AC342D4007CA851 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CAA2AC342D4007CA851 /* HomeController.swift */; };
 		CB5D4CB02AC342D6007CA851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D4CAF2AC342D6007CA851 /* Assets.xcassets */; };
-		CB5D4CB32AC342D6007CA851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5D4CB12AC342D6007CA851 /* LaunchScreen.storyboard */; };
 		CB5D4CC12AC34567007CA851 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC02AC34567007CA851 /* Constans.swift */; };
 		CB5D4CC32AC47AB0007CA851 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC22AC47AB0007CA851 /* Coin.swift */; };
 		CB5D4CC52AC47C3E007CA851 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC42AC47C3E007CA851 /* CoinCell.swift */; };
@@ -39,7 +39,6 @@
 		CB5D4CA82AC342D4007CA851 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB5D4CAA2AC342D4007CA851 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CB5D4CAF2AC342D6007CA851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB5D4CB22AC342D6007CA851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB5D4CB42AC342D6007CA851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB5D4CC02AC34567007CA851 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		CB5D4CC22AC47AB0007CA851 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2BF65F2ACDE095003A99E9 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,6 @@
 				CB5D4CA62AC342D4007CA851 /* AppDelegate.swift */,
 				CB5D4CA82AC342D4007CA851 /* SceneDelegate.swift */,
 				CB5D4CAF2AC342D6007CA851 /* Assets.xcassets */,
-				CB5D4CB12AC342D6007CA851 /* LaunchScreen.storyboard */,
 				CB5D4CC02AC34567007CA851 /* Constans.swift */,
 				CB2BF64E2AC4924E003A99E9 /* CustomLabel.swift */,
 			);
@@ -161,6 +160,9 @@
 			dependencies = (
 			);
 			name = Crypto;
+			packageProductDependencies = (
+				CB2BF65E2ACDE095003A99E9 /* SDWebImage */,
+			);
 			productName = Crypto;
 			productReference = CB5D4CA32AC342D4007CA851 /* Crypto.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +191,9 @@
 				Base,
 			);
 			mainGroup = CB5D4C9A2AC342D4007CA851;
+			packageReferences = (
+				CB2BF65D2ACDE095003A99E9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = CB5D4CA42AC342D4007CA851 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB5D4CB32AC342D6007CA851 /* LaunchScreen.storyboard in Resources */,
 				CB5D4CB02AC342D6007CA851 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,17 +237,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CB5D4CB12AC342D6007CA851 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB5D4CB22AC342D6007CA851 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB5D4CB52AC342D6007CA851 /* Debug */ = {
@@ -444,6 +437,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB2BF65D2ACDE095003A99E9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB2BF65E2ACDE095003A99E9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2BF65D2ACDE095003A99E9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB5D4C9B2AC342D4007CA851 /* Project object */;
 }

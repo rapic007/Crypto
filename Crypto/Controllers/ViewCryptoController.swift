@@ -70,11 +70,7 @@ class ViewCryptoController: UIViewController {
         self.marketCapLabel.text = self.viewModel.marketCapLabel
         self.maxSupplyLabel.text = self.viewModel.maxSupplyLabel
         
-        self.viewModel.onImageLoaded = { [weak self] logoImage in
-            DispatchQueue.main.async {
-                self?.coinLogo.image = logoImage
-            }
-        }
+        self.coinLogo.sd_setImage(with: self.viewModel.coin.logoURL)
         
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
