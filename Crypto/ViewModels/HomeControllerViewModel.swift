@@ -4,10 +4,10 @@ class HomeControllerViewModel {
     
     var onCoinsUpdated: (() -> Void)?
     var onErrorMessage: ((CoinServiceError) -> Void)?
-    private var inSeachMode: Bool = false
+    private var inSearchMode: Bool = false
     
     var coins: [Coin] {
-        return self.inSeachMode ? filteredCoins : allCoins
+        return self.inSearchMode ? filteredCoins : allCoins
     }
     
     private(set) var allCoins: [Coin] = [] {
@@ -45,7 +45,7 @@ extension HomeControllerViewModel {
         let isActive = searchController.isActive
         let searchText = searchController.searchBar.text ?? ""
         
-        self.inSeachMode = isActive && !searchText.isEmpty
+        self.inSearchMode = isActive && !searchText.isEmpty
     }
     
     public func updateSearchController(searchBarText: String?) {

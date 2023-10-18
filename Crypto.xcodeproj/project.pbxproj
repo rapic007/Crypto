@@ -23,6 +23,8 @@
 		CB5D4CC12AC34567007CA851 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC02AC34567007CA851 /* Constans.swift */; };
 		CB5D4CC32AC47AB0007CA851 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC22AC47AB0007CA851 /* Coin.swift */; };
 		CB5D4CC52AC47C3E007CA851 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D4CC42AC47C3E007CA851 /* CoinCell.swift */; };
+		CBBF97252AE04620005E394F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBF97242AE04620005E394F /* Localization.swift */; };
+		CBBF97282AE046D6005E394F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBBF972A2AE046D6005E394F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		CB5D4CC02AC34567007CA851 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		CB5D4CC22AC47AB0007CA851 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		CB5D4CC42AC47C3E007CA851 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		CBBF97242AE04620005E394F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		CBBF97292AE046D6005E394F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CBBF972B2AE046E2005E394F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 		CB5D4CA52AC342D4007CA851 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				CBBF972C2AE04E3B005E394F /* Localization */,
 				CB5D4CBF2AC34482007CA851 /* API */,
 				CB5D4CBE2AC34477007CA851 /* Models */,
 				CB5D4CBD2AC34466007CA851 /* Views */,
@@ -144,6 +150,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		CBBF972C2AE04E3B005E394F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				CBBF97242AE04620005E394F /* Localization.swift */,
+				CBBF972A2AE046D6005E394F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +204,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = CB5D4C9A2AC342D4007CA851;
 			packageReferences = (
@@ -209,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5D4CB02AC342D6007CA851 /* Assets.xcassets in Resources */,
+				CBBF97282AE046D6005E394F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +247,7 @@
 				CB5D4CC32AC47AB0007CA851 /* Coin.swift in Sources */,
 				CB5D4CC52AC47C3E007CA851 /* CoinCell.swift in Sources */,
 				CB2BF65A2ACC70BB003A99E9 /* CoinService.swift in Sources */,
+				CBBF97252AE04620005E394F /* Localization.swift in Sources */,
 				CB5D4CA92AC342D4007CA851 /* SceneDelegate.swift in Sources */,
 				CB2BF64F2AC4924E003A99E9 /* CustomLabel.swift in Sources */,
 				CB2BF65C2ACC7932003A99E9 /* HomeControllerViewModel.swift in Sources */,
@@ -237,6 +255,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBBF972A2AE046D6005E394F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBBF97292AE046D6005E394F /* en */,
+				CBBF972B2AE046E2005E394F /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB5D4CB52AC342D6007CA851 /* Debug */ = {

@@ -61,9 +61,11 @@ class ViewCryptoController: UIViewController {
     private func setupUI() {
         maxSupplyLabel.numberOfLines = 500
         
+        let buttonTitle = "Back".localized()
+        
         self.view.backgroundColor = .systemBackground
         self.navigationItem.title = self.viewModel.coin.name
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: nil, action: nil)
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .done, target: nil, action: nil)
         
         self.rankLabel.text = self.viewModel.rankLabel
         self.priceLabel.text = self.viewModel.priceLabel

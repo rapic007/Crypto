@@ -43,7 +43,7 @@ class HomeController: UIViewController {
         self.viewModel.onErrorMessage = { [weak self] error in
             DispatchQueue.main.async {
                 let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Назад", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "Back".localized(), style: .cancel, handler: nil))
                 
                 switch error {
                 case .serverError(let serverError):
@@ -82,7 +82,7 @@ class HomeController: UIViewController {
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Поиск"
+        self.searchController.searchBar.placeholder = "Search".localized()
         
         self.navigationItem.searchController = searchController
         self.definesPresentationContext = false
